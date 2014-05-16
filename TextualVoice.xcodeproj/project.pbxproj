@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		CCD68C56192613B8002EC591 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD68C55192613B8002EC591 /* Cocoa.framework */; };
 		CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCD68C5E192613B8002EC591 /* InfoPlist.strings */; };
+		CCD68C681926161E002EC591 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = CCD68C671926161E002EC591 /* Headers */; };
+		CCD68C6B19261729002EC591 /* TPI_TextualVoiceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD68C6A19261729002EC591 /* TPI_TextualVoiceClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC75D0BF19261FCC00B8E1C1 /* TPI_TextualVoiceClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPI_TextualVoiceClass.h; sourceTree = "<group>"; };
 		CCD68C52192613B8002EC591 /* TextualVoice.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextualVoice.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD68C55192613B8002EC591 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CCD68C58192613B8002EC591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -20,6 +23,8 @@
 		CCD68C5D192613B8002EC591 /* TextualVoice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextualVoice-Info.plist"; sourceTree = "<group>"; };
 		CCD68C5F192613B8002EC591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CCD68C61192613B8002EC591 /* TextualVoice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextualVoice-Prefix.pch"; sourceTree = "<group>"; };
+		CCD68C671926161E002EC591 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../../../Applications/Textual.app/Contents/Headers; sourceTree = "<group>"; };
+		CCD68C6A19261729002EC591 /* TPI_TextualVoiceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPI_TextualVoiceClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 				CCD68C5B192613B8002EC591 /* TextualVoice */,
 				CCD68C54192613B8002EC591 /* Frameworks */,
 				CCD68C53192613B8002EC591 /* Products */,
+				CCD68C671926161E002EC591 /* Headers */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +90,8 @@
 				CCD68C5D192613B8002EC591 /* TextualVoice-Info.plist */,
 				CCD68C5E192613B8002EC591 /* InfoPlist.strings */,
 				CCD68C61192613B8002EC591 /* TextualVoice-Prefix.pch */,
+				CC75D0BF19261FCC00B8E1C1 /* TPI_TextualVoiceClass.h */,
+				CCD68C6A19261729002EC591 /* TPI_TextualVoiceClass.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -115,7 +123,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "___FULLUSERNAME___";
+				ORGANIZATIONNAME = caktux;
 			};
 			buildConfigurationList = CCD68C4D192613B8002EC591 /* Build configuration list for PBXProject "TextualVoice" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -140,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */,
+				CCD68C681926161E002EC591 /* Headers in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCD68C6B19261729002EC591 /* TPI_TextualVoiceClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +210,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -233,6 +243,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -240,9 +251,16 @@
 		CCD68C65192613B8002EC591 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Textual.app/Contents/Frameworks/;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextualVoice/TextualVoice-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Applications/Textual.app/Contents/Headers,
+				);
 				INFOPLIST_FILE = "TextualVoice/TextualVoice-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -253,9 +271,16 @@
 		CCD68C66192613B8002EC591 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = /Applications/Textual.app/Contents/MacOS/Textual;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Applications/Textual.app/Contents/Frameworks/;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextualVoice/TextualVoice-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/Applications/Textual.app/Contents/Headers,
+				);
 				INFOPLIST_FILE = "TextualVoice/TextualVoice-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -282,6 +307,7 @@
 				CCD68C66192613B8002EC591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
