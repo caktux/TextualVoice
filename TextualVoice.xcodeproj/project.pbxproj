@@ -1,0 +1,289 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCD68C56192613B8002EC591 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD68C55192613B8002EC591 /* Cocoa.framework */; };
+		CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCD68C5E192613B8002EC591 /* InfoPlist.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CCD68C52192613B8002EC591 /* TextualVoice.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextualVoice.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD68C55192613B8002EC591 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		CCD68C58192613B8002EC591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCD68C59192613B8002EC591 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		CCD68C5A192613B8002EC591 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		CCD68C5D192613B8002EC591 /* TextualVoice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextualVoice-Info.plist"; sourceTree = "<group>"; };
+		CCD68C5F192613B8002EC591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCD68C61192613B8002EC591 /* TextualVoice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextualVoice-Prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCD68C4F192613B8002EC591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD68C56192613B8002EC591 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCD68C49192613B8002EC591 = {
+			isa = PBXGroup;
+			children = (
+				CCD68C5B192613B8002EC591 /* TextualVoice */,
+				CCD68C54192613B8002EC591 /* Frameworks */,
+				CCD68C53192613B8002EC591 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCD68C53192613B8002EC591 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68C52192613B8002EC591 /* TextualVoice.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCD68C54192613B8002EC591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68C55192613B8002EC591 /* Cocoa.framework */,
+				CCD68C57192613B8002EC591 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCD68C57192613B8002EC591 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68C58192613B8002EC591 /* Foundation.framework */,
+				CCD68C59192613B8002EC591 /* CoreData.framework */,
+				CCD68C5A192613B8002EC591 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		CCD68C5B192613B8002EC591 /* TextualVoice */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68C5C192613B8002EC591 /* Supporting Files */,
+			);
+			path = TextualVoice;
+			sourceTree = "<group>";
+		};
+		CCD68C5C192613B8002EC591 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCD68C5D192613B8002EC591 /* TextualVoice-Info.plist */,
+				CCD68C5E192613B8002EC591 /* InfoPlist.strings */,
+				CCD68C61192613B8002EC591 /* TextualVoice-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCD68C51192613B8002EC591 /* TextualVoice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCD68C64192613B8002EC591 /* Build configuration list for PBXNativeTarget "TextualVoice" */;
+			buildPhases = (
+				CCD68C4E192613B8002EC591 /* Sources */,
+				CCD68C4F192613B8002EC591 /* Frameworks */,
+				CCD68C50192613B8002EC591 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextualVoice;
+			productName = TextualVoice;
+			productReference = CCD68C52192613B8002EC591 /* TextualVoice.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCD68C4A192613B8002EC591 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___FULLUSERNAME___";
+			};
+			buildConfigurationList = CCD68C4D192613B8002EC591 /* Build configuration list for PBXProject "TextualVoice" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CCD68C49192613B8002EC591;
+			productRefGroup = CCD68C53192613B8002EC591 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCD68C51192613B8002EC591 /* TextualVoice */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCD68C50192613B8002EC591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCD68C4E192613B8002EC591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CCD68C5E192613B8002EC591 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCD68C5F192613B8002EC591 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCD68C62192613B8002EC591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CCD68C63192613B8002EC591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CCD68C65192613B8002EC591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextualVoice/TextualVoice-Prefix.pch";
+				INFOPLIST_FILE = "TextualVoice/TextualVoice-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		CCD68C66192613B8002EC591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TextualVoice/TextualVoice-Prefix.pch";
+				INFOPLIST_FILE = "TextualVoice/TextualVoice-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCD68C4D192613B8002EC591 /* Build configuration list for PBXProject "TextualVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCD68C62192613B8002EC591 /* Debug */,
+				CCD68C63192613B8002EC591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCD68C64192613B8002EC591 /* Build configuration list for PBXNativeTarget "TextualVoice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCD68C65192613B8002EC591 /* Debug */,
+				CCD68C66192613B8002EC591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCD68C4A192613B8002EC591 /* Project object */;
+}
