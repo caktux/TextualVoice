@@ -11,11 +11,9 @@
 @interface TPI_TextualVoiceClass : NSObject <THOPluginProtocol>
 
 - (NSArray *)pluginSupportsUserInputCommands;
-
 - (void)messageSentByUser:(IRCClient *)client message:(NSString *)messageString command:(NSString *)commandString;
 
 - (NSArray *)pluginSupportsServerInputCommands;
-
 - (void)messageReceivedByServer:(IRCClient *)client sender:(NSDictionary *)senderDict message:(NSDictionary *)messageDict;
 
 @end
