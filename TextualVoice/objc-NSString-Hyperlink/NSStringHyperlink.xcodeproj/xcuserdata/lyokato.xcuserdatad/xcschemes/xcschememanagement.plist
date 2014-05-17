@@ -4,20 +4,20 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>TextualVoice.xcscheme</key>
+		<key>NSStringHyperlink.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>TextualVoicePrefPane.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>CCD68C51192613B8002EC591</key>
+		<key>90D4BA7C1590110C00F29409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>90D4BA9D1590110E00F29409</key>
 		<dict>
 			<key>primary</key>
 			<true/>

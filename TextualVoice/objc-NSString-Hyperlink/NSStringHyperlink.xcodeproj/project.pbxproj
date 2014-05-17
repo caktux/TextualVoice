@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90D4BA821590110C00F29409 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D4BA811590110C00F29409 /* Cocoa.framework */; };
+		90D4BA8C1590110C00F29409 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90D4BA8A1590110C00F29409 /* InfoPlist.strings */; };
+		90D4BA8E1590110D00F29409 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BA8D1590110D00F29409 /* main.m */; };
+		90D4BA921590110D00F29409 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 90D4BA901590110D00F29409 /* Credits.rtf */; };
+		90D4BA951590110D00F29409 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BA941590110D00F29409 /* AppDelegate.m */; };
+		90D4BA981590110D00F29409 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D4BA961590110D00F29409 /* MainMenu.xib */; };
+		90D4BAA01590110E00F29409 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D4BA9F1590110E00F29409 /* SenTestingKit.framework */; };
+		90D4BAA11590110E00F29409 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90D4BA811590110C00F29409 /* Cocoa.framework */; };
+		90D4BAA91590110E00F29409 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90D4BAA71590110E00F29409 /* InfoPlist.strings */; };
+		90D4BAAC1590110E00F29409 /* NSStringHyperlinkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BAAB1590110E00F29409 /* NSStringHyperlinkTests.m */; };
+		90D4BAB91590115300F29409 /* NSString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BAB61590115300F29409 /* NSString+Hyperlink.m */; };
+		90D4BABA1590115300F29409 /* NSString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BAB61590115300F29409 /* NSString+Hyperlink.m */; };
+		90D4BABB1590115300F29409 /* NSStringExtractedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BAB81590115300F29409 /* NSStringExtractedComponent.m */; };
+		90D4BABC1590115300F29409 /* NSStringExtractedComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D4BAB81590115300F29409 /* NSStringExtractedComponent.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		90D4BAA21590110E00F29409 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 90D4BA741590110C00F29409 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 90D4BA7C1590110C00F29409;
+			remoteInfo = NSStringHyperlink;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		90D4BA7D1590110C00F29409 /* NSStringHyperlink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSStringHyperlink.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D4BA811590110C00F29409 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		90D4BA841590110C00F29409 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		90D4BA851590110C00F29409 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		90D4BA861590110C00F29409 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		90D4BA891590110C00F29409 /* NSStringHyperlink-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSStringHyperlink-Info.plist"; sourceTree = "<group>"; };
+		90D4BA8B1590110C00F29409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90D4BA8D1590110D00F29409 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90D4BA8F1590110D00F29409 /* NSStringHyperlink-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSStringHyperlink-Prefix.pch"; sourceTree = "<group>"; };
+		90D4BA911590110D00F29409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		90D4BA931590110D00F29409 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		90D4BA941590110D00F29409 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		90D4BA971590110D00F29409 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		90D4BA9E1590110E00F29409 /* NSStringHyperlinkTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSStringHyperlinkTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		90D4BA9F1590110E00F29409 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		90D4BAA61590110E00F29409 /* NSStringHyperlinkTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSStringHyperlinkTests-Info.plist"; sourceTree = "<group>"; };
+		90D4BAA81590110E00F29409 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90D4BAAA1590110E00F29409 /* NSStringHyperlinkTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSStringHyperlinkTests.h; sourceTree = "<group>"; };
+		90D4BAAB1590110E00F29409 /* NSStringHyperlinkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringHyperlinkTests.m; sourceTree = "<group>"; };
+		90D4BAB51590115300F29409 /* NSString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hyperlink.h"; sourceTree = "<group>"; };
+		90D4BAB61590115300F29409 /* NSString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hyperlink.m"; sourceTree = "<group>"; };
+		90D4BAB71590115300F29409 /* NSStringExtractedComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSStringExtractedComponent.h; sourceTree = "<group>"; };
+		90D4BAB81590115300F29409 /* NSStringExtractedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSStringExtractedComponent.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90D4BA7A1590110C00F29409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BA821590110C00F29409 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D4BA9A1590110E00F29409 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BAA01590110E00F29409 /* SenTestingKit.framework in Frameworks */,
+				90D4BAA11590110E00F29409 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90D4BA721590110C00F29409 = {
+			isa = PBXGroup;
+			children = (
+				90D4BAB51590115300F29409 /* NSString+Hyperlink.h */,
+				90D4BAB61590115300F29409 /* NSString+Hyperlink.m */,
+				90D4BAB71590115300F29409 /* NSStringExtractedComponent.h */,
+				90D4BAB81590115300F29409 /* NSStringExtractedComponent.m */,
+				90D4BA871590110C00F29409 /* NSStringHyperlink */,
+				90D4BAA41590110E00F29409 /* NSStringHyperlinkTests */,
+				90D4BA801590110C00F29409 /* Frameworks */,
+				90D4BA7E1590110C00F29409 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90D4BA7E1590110C00F29409 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BA7D1590110C00F29409 /* NSStringHyperlink.app */,
+				90D4BA9E1590110E00F29409 /* NSStringHyperlinkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90D4BA801590110C00F29409 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BA811590110C00F29409 /* Cocoa.framework */,
+				90D4BA9F1590110E00F29409 /* SenTestingKit.framework */,
+				90D4BA831590110C00F29409 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90D4BA831590110C00F29409 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BA841590110C00F29409 /* AppKit.framework */,
+				90D4BA851590110C00F29409 /* CoreData.framework */,
+				90D4BA861590110C00F29409 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		90D4BA871590110C00F29409 /* NSStringHyperlink */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BA931590110D00F29409 /* AppDelegate.h */,
+				90D4BA941590110D00F29409 /* AppDelegate.m */,
+				90D4BA961590110D00F29409 /* MainMenu.xib */,
+				90D4BA881590110C00F29409 /* Supporting Files */,
+			);
+			path = NSStringHyperlink;
+			sourceTree = "<group>";
+		};
+		90D4BA881590110C00F29409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BA891590110C00F29409 /* NSStringHyperlink-Info.plist */,
+				90D4BA8A1590110C00F29409 /* InfoPlist.strings */,
+				90D4BA8D1590110D00F29409 /* main.m */,
+				90D4BA8F1590110D00F29409 /* NSStringHyperlink-Prefix.pch */,
+				90D4BA901590110D00F29409 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90D4BAA41590110E00F29409 /* NSStringHyperlinkTests */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BAAA1590110E00F29409 /* NSStringHyperlinkTests.h */,
+				90D4BAAB1590110E00F29409 /* NSStringHyperlinkTests.m */,
+				90D4BAA51590110E00F29409 /* Supporting Files */,
+			);
+			path = NSStringHyperlinkTests;
+			sourceTree = "<group>";
+		};
+		90D4BAA51590110E00F29409 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90D4BAA61590110E00F29409 /* NSStringHyperlinkTests-Info.plist */,
+				90D4BAA71590110E00F29409 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90D4BA7C1590110C00F29409 /* NSStringHyperlink */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90D4BAAF1590110E00F29409 /* Build configuration list for PBXNativeTarget "NSStringHyperlink" */;
+			buildPhases = (
+				90D4BA791590110C00F29409 /* Sources */,
+				90D4BA7A1590110C00F29409 /* Frameworks */,
+				90D4BA7B1590110C00F29409 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NSStringHyperlink;
+			productName = NSStringHyperlink;
+			productReference = 90D4BA7D1590110C00F29409 /* NSStringHyperlink.app */;
+			productType = "com.apple.product-type.application";
+		};
+		90D4BA9D1590110E00F29409 /* NSStringHyperlinkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90D4BAB21590110E00F29409 /* Build configuration list for PBXNativeTarget "NSStringHyperlinkTests" */;
+			buildPhases = (
+				90D4BA991590110E00F29409 /* Sources */,
+				90D4BA9A1590110E00F29409 /* Frameworks */,
+				90D4BA9B1590110E00F29409 /* Resources */,
+				90D4BA9C1590110E00F29409 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				90D4BAA31590110E00F29409 /* PBXTargetDependency */,
+			);
+			name = NSStringHyperlinkTests;
+			productName = NSStringHyperlinkTests;
+			productReference = 90D4BA9E1590110E00F29409 /* NSStringHyperlinkTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90D4BA741590110C00F29409 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 90D4BA771590110C00F29409 /* Build configuration list for PBXProject "NSStringHyperlink" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90D4BA721590110C00F29409;
+			productRefGroup = 90D4BA7E1590110C00F29409 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90D4BA7C1590110C00F29409 /* NSStringHyperlink */,
+				90D4BA9D1590110E00F29409 /* NSStringHyperlinkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90D4BA7B1590110C00F29409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BA8C1590110C00F29409 /* InfoPlist.strings in Resources */,
+				90D4BA921590110D00F29409 /* Credits.rtf in Resources */,
+				90D4BA981590110D00F29409 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D4BA9B1590110E00F29409 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BAA91590110E00F29409 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90D4BA9C1590110E00F29409 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90D4BA791590110C00F29409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BA8E1590110D00F29409 /* main.m in Sources */,
+				90D4BA951590110D00F29409 /* AppDelegate.m in Sources */,
+				90D4BAB91590115300F29409 /* NSString+Hyperlink.m in Sources */,
+				90D4BABB1590115300F29409 /* NSStringExtractedComponent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90D4BA991590110E00F29409 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90D4BAAC1590110E00F29409 /* NSStringHyperlinkTests.m in Sources */,
+				90D4BABA1590115300F29409 /* NSString+Hyperlink.m in Sources */,
+				90D4BABC1590115300F29409 /* NSStringExtractedComponent.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		90D4BAA31590110E00F29409 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 90D4BA7C1590110C00F29409 /* NSStringHyperlink */;
+			targetProxy = 90D4BAA21590110E00F29409 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		90D4BA8A1590110C00F29409 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D4BA8B1590110C00F29409 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		90D4BA901590110D00F29409 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D4BA911590110D00F29409 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		90D4BA961590110D00F29409 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D4BA971590110D00F29409 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		90D4BAA71590110E00F29409 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D4BAA81590110E00F29409 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90D4BAAD1590110E00F29409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		90D4BAAE1590110E00F29409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		90D4BAB01590110E00F29409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSStringHyperlink/NSStringHyperlink-Prefix.pch";
+				INFOPLIST_FILE = "NSStringHyperlink/NSStringHyperlink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		90D4BAB11590110E00F29409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSStringHyperlink/NSStringHyperlink-Prefix.pch";
+				INFOPLIST_FILE = "NSStringHyperlink/NSStringHyperlink-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		90D4BAB31590110E00F29409 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSStringHyperlink.app/Contents/MacOS/NSStringHyperlink";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSStringHyperlink/NSStringHyperlink-Prefix.pch";
+				INFOPLIST_FILE = "NSStringHyperlinkTests/NSStringHyperlinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		90D4BAB41590110E00F29409 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSStringHyperlink.app/Contents/MacOS/NSStringHyperlink";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSStringHyperlink/NSStringHyperlink-Prefix.pch";
+				INFOPLIST_FILE = "NSStringHyperlinkTests/NSStringHyperlinkTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90D4BA771590110C00F29409 /* Build configuration list for PBXProject "NSStringHyperlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4BAAD1590110E00F29409 /* Debug */,
+				90D4BAAE1590110E00F29409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90D4BAAF1590110E00F29409 /* Build configuration list for PBXNativeTarget "NSStringHyperlink" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4BAB01590110E00F29409 /* Debug */,
+				90D4BAB11590110E00F29409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		90D4BAB21590110E00F29409 /* Build configuration list for PBXNativeTarget "NSStringHyperlinkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4BAB31590110E00F29409 /* Debug */,
+				90D4BAB41590110E00F29409 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90D4BA741590110C00F29409 /* Project object */;
+}

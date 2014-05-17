@@ -7,7 +7,8 @@
 //
 
 #import "TPI_TextualVoiceClass.h"
-
+#import "NSString+Hyperlink.h"
+#import "NSStringExtractedComponent.h"
 
 @interface TPI_TextualVoiceClass ()
 @property (nonatomic, strong) NSDictionary *nicknames;
@@ -59,24 +60,38 @@
                         message:(NSDictionary *)messageDict
 {
 	IRCChannel *c = [[self worldController] selectedChannelOn:client];
-    
+
   NSString *sender = senderDict[@"senderNickname"];
   NSString *message = messageDict[@"messageSequence"];
+  NSArray *components = [message componentsSplittedByHyperlink];
+  NSString *textonly = @"";
+
+  for (NSStringExtractedComponent *comp in components) {
+    switch (comp.type) {
+      case NSStringExtractedComponentTypeNormal:
+        textonly = [textonly stringByAppendingString:comp.string];
+        NSLog(@"TEXT: %@", comp.string);
+        break;
+      case NSStringExtractedComponentTypeHyperlink:
+        NSLog(@"URL: %@", comp.string);
+        break;
+    }
+  }
 
   for (id key in [self nicknames]) {
     NSString *allfromnick = [[self nicknames] objectForKey:key];
 
-    // Use voice only from selected nicknames that are either in private messages, contain our nickname or has the "true" flag to get all messages from that nickname
-    if ([sender isEqualToString:key] && ([c isPrivateMessage] || [message contains:[client localNickname]] || [allfromnick isEqualToString:@"true"]))
+    // Use voice only from selected nicknames that are either in private messages, contain our nickname, has the "true" flag to speak all messages from that nickname or contains the channel name
+    if ([sender isEqualToString:key] && ([c isPrivateMessage] || [textonly contains:[client localNickname]] || [allfromnick isEqualToString:@"true"] || [allfromnick contains:[c name]]))
     {
       NSSpeechSynthesizer *synth = [[NSSpeechSynthesizer alloc] initWithVoice:@"com.apple.speech.synthesis.voice.Alex"];
       if ([NSSpeechSynthesizer isAnyApplicationSpeaking])
       {
         [synth stopSpeaking];
-        [synth startSpeakingString:message];
+        [synth startSpeakingString:textonly];
       }
       else
-        [synth startSpeakingString:message];
+        [synth startSpeakingString:textonly];
     }
   }
 }

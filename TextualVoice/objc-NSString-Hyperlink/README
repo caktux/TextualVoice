@@ -1,0 +1,54 @@
+=======================================================================
+ INSTALL
+=======================================================================
+
+Copy files 
+
+- NSString+Hyperlink.h
+- NSString+Hyperlink.m
+- NSStringExtractedComponent.h
+- NSStringExtractedComponent.m
+
+=======================================================================
+ USAGE
+=======================================================================
+
+- hyperlink
+
+    #import "NSString+Hyperlink.h"
+
+    NSString *str = @"foobar http://example.org/1 foobar http://example.org/2";
+    NSArray *urls = [str hyperlinks];
+    for (NSString *urlString in urls) {
+        NSLog(@"URL: %@", urlString);
+    }
+
+- componentsSplittedByHyperlink
+
+    NSArray *components = [str componentsSplittedByHyperlink];
+    for (NSStringExtractedComponent *comp in components) {                     
+        switch (comp.type) {            
+            case NSStringExtractedComponentTypeNormal:                         
+                NSLog(@"TEXT: %@", comp.string);
+                break;
+            case NSStringExtractedComponentTypeHyperlink:                      
+                NSLog(@"URL: %@", comp.string);                                
+                break;                                                             
+        }
+    }
+
+- componentsSplittedByHyperlink:withTrimming
+
+    // you can get non-trimmed components
+    NSArray *components = [str componentsSplittedByHyperlinkWithTrimming:NO];
+    // same as componentsSplittedByHyperlink for rest
+
+=======================================================================
+ License
+=======================================================================
+
+MIT License
+
+Copyright (c) 2012 Lyo Kato <lyo.kato at gmail dot com>
+All rights reserved.
+
