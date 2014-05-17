@@ -68,7 +68,7 @@
   for (id key in [self nicknames]) {
     id allfromnick = [nickname objectForKey:key];
 
-    // Use voice only from selected nicknames that are either in private messages, contain our nickname or has the "true" flag to for all messages from that nickname
+    // Use voice only from selected nicknames that are either in private messages, contain our nickname or has the "true" flag to get all messages from that nickname
     if ([sender isEqualToString:key] && ([c isPrivateMessage] || [message contains:[client localNickname]] || [allfromnick isEqualToString:@"true"]))
     {
       NSSpeechSynthesizer *synth = [[NSSpeechSynthesizer alloc] initWithVoice:@"com.apple.speech.synthesis.voice.Alex"];
