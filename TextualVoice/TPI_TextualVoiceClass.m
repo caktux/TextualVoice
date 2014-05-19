@@ -12,6 +12,7 @@
 
 @interface TPI_TextualVoiceClass ()
 @property (nonatomic, strong) NSDictionary *nicknames;
+@property (nonatomic, strong) NSSpeechSynthesizer *synth;
 @end
 
 @implementation TPI_TextualVoiceClass
@@ -29,6 +30,8 @@
   
   /* Save nicknames. */
   self.nicknames = nicksData;
+
+  self.synth = [[NSSpeechSynthesizer alloc] init];
 }
 
 - (NSArray *)pluginSupportsUserInputCommands
@@ -45,22 +48,24 @@
                   message:(NSString *)messageString
                   command:(NSString *)commandString
 {
-  NSSpeechSynthesizer *synth = [[NSSpeechSynthesizer alloc] initWithVoice:@"com.apple.speech.synthesis.voice.Alex"];
-  if ([NSSpeechSynthesizer isAnyApplicationSpeaking])
+  if ([commandString isEqualToString:@"SAY"])
   {
-    [synth stopSpeaking];
-    [synth startSpeakingString:messageString];
+    [self.synth stopSpeaking];
+    [self.synth startSpeakingString:messageString];
   }
-  else
-    [synth startSpeakingString:messageString];
 }
 
 - (void)messageReceivedByServer:(IRCClient *)client
                          sender:(NSDictionary *)senderDict
                         message:(NSDictionary *)messageDict
 {
-	IRCChannel *c = [[self worldController] selectedChannelOn:client];
-
+  NSString *channel = @"";
+  NSArray *params = messageDict[@"messageParamaters"];
+  if ([params count] > 0 && [params[0] hasPrefix:@"#"])
+  {
+    IRCChannel *c = [client findChannel:params[0]];
+    channel = [c name];
+  }
   NSString *sender = senderDict[@"senderNickname"];
   NSString *message = messageDict[@"messageSequence"];
   NSArray *components = [message componentsSplittedByHyperlink];
@@ -70,28 +75,29 @@
     switch (comp.type) {
       case NSStringExtractedComponentTypeNormal:
         textonly = [textonly stringByAppendingString:comp.string];
-        NSLog(@"TEXT: %@", comp.string);
+        // NSLog(@"TEXT: %@", comp.string);
         break;
       case NSStringExtractedComponentTypeHyperlink:
-        NSLog(@"URL: %@", comp.string);
+        // NSLog(@"URL: %@", comp.string);
         break;
     }
   }
+  
+  textonly = [textonly stringByReplacingOccurrencesOfString:@"=>" withString:@" "];
 
   for (id key in [self nicknames]) {
     NSString *allfromnick = [[self nicknames] objectForKey:key];
 
     // Use voice only from selected nicknames that are either in private messages, contain our nickname, has the "true" flag to speak all messages from that nickname or contains the channel name
-    if ([sender isEqualToString:key] && ([c isPrivateMessage] || [textonly contains:[client localNickname]] || [allfromnick isEqualToString:@"true"] || [allfromnick contains:[c name]]))
+    if ([sender isEqualToString:key] && (
+           [textonly contains:[client localNickname]] ||
+           [allfromnick isEqualToString:@"true"] ||
+           [allfromnick contains:channel] ||
+           [channel length] == 0 // private message?
+        ))
     {
-      NSSpeechSynthesizer *synth = [[NSSpeechSynthesizer alloc] initWithVoice:@"com.apple.speech.synthesis.voice.Alex"];
-      if ([NSSpeechSynthesizer isAnyApplicationSpeaking])
-      {
-        [synth stopSpeaking];
-        [synth startSpeakingString:textonly];
-      }
-      else
-        [synth startSpeakingString:textonly];
+      [self.synth stopSpeaking];
+      [self.synth startSpeakingString:textonly];
     }
   }
 }
