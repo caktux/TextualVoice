@@ -15,5 +15,6 @@
 
 - (NSArray *)pluginSupportsServerInputCommands;
 - (void)messageReceivedByServer:(IRCClient *)client sender:(NSDictionary *)senderDict message:(NSDictionary *)messageDict;
+- (void)dealloc;
 
 @end

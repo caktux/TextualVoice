@@ -66,6 +66,12 @@
     IRCChannel *c = [client findChannel:params[0]];
     channel = [c name];
   }
+  else if ([params count] > 0 && [params[0] hasPrefix:@"~"])
+  {
+    channel = params[0];
+    NSLog(@"%@", channel);
+  }
+
   NSString *sender = senderDict[@"senderNickname"];
   NSString *message = messageDict[@"messageSequence"];
   NSArray *components = [message componentsSplittedByHyperlink];
@@ -96,9 +102,26 @@
            [channel length] == 0 // private message?
         ))
     {
+      if ([allfromnick hasPrefix:@"voice:"]) {
+        NSArray *chans = [allfromnick componentsSeparatedByString:@" "];
+        NSString *voice = [chans[0] stringByReplacingOccurrencesOfString:@"voice:" withString:@"com.apple.speech.synthesis.voice."];
+        self.synth = [self.synth initWithVoice:voice];
+      }
+      else
+      {
+        self.synth = [self.synth init];
+      }
+
       [self.synth stopSpeaking];
       [self.synth startSpeakingString:textonly];
     }
   }
 }
+
+- (void) dealloc
+{
+  [self.synth dealloc];
+  [super dealloc];
+}
+
 @end
