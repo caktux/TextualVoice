@@ -12,7 +12,6 @@
 		CC793D051927417300AA2F6C /* NSString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = CC793D041927417300AA2F6C /* NSString+Hyperlink.m */; };
 		CCD68C56192613B8002EC591 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCD68C55192613B8002EC591 /* Cocoa.framework */; };
 		CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCD68C5E192613B8002EC591 /* InfoPlist.strings */; };
-		CCD68C681926161E002EC591 /* Headers in Resources */ = {isa = PBXBuildFile; fileRef = CCD68C671926161E002EC591 /* Headers */; };
 		CCD68C6B19261729002EC591 /* TPI_TextualVoiceClass.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD68C6A19261729002EC591 /* TPI_TextualVoiceClass.m */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +30,6 @@
 		CCD68C5D192613B8002EC591 /* TextualVoice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TextualVoice-Info.plist"; sourceTree = "<group>"; };
 		CCD68C5F192613B8002EC591 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CCD68C61192613B8002EC591 /* TextualVoice-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TextualVoice-Prefix.pch"; sourceTree = "<group>"; };
-		CCD68C671926161E002EC591 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../../../Applications/Textual.app/Contents/Headers; sourceTree = "<group>"; };
 		CCD68C6A19261729002EC591 /* TPI_TextualVoiceClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPI_TextualVoiceClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,7 +51,6 @@
 				CCD68C5B192613B8002EC591 /* TextualVoice */,
 				CCD68C54192613B8002EC591 /* Frameworks */,
 				CCD68C53192613B8002EC591 /* Products */,
-				CCD68C671926161E002EC591 /* Headers */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,7 +159,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CCD68C60192613B8002EC591 /* InfoPlist.strings in Resources */,
-				CCD68C681926161E002EC591 /* Headers in Resources */,
 				CC75D0C319263CDE00B8E1C1 /* nicknames.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

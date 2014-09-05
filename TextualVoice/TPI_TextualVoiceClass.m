@@ -13,12 +13,15 @@
 @interface TPI_TextualVoiceClass ()
 @property (nonatomic, strong) NSDictionary *nicknames;
 @property (nonatomic, strong) NSSpeechSynthesizer *synth;
+@property (nonatomic, readwrite) Boolean enabled;
 @end
 
 @implementation TPI_TextualVoiceClass
 
 - (void)pluginLoadedIntoMemory:(IRCWorld *)world
 {
+  self.enabled = true;
+
   /* Find ourselves. */
   NSBundle *currBundle = [NSBundle bundleForClass:[self class]];
   
@@ -32,11 +35,12 @@
   self.nicknames = nicksData;
 
   self.synth = [[NSSpeechSynthesizer alloc] init];
+  [self.synth setVolume:0.1];
 }
 
 - (NSArray *)pluginSupportsUserInputCommands
 {
-  return @[@"say"];
+  return @[@"say", @"talk"];
 }
 
 - (NSArray *)pluginSupportsServerInputCommands
@@ -48,10 +52,27 @@
                   message:(NSString *)messageString
                   command:(NSString *)commandString
 {
+  IRCChannel *c = [[self worldController] selectedChannelOn:client];
+
   if ([commandString isEqualToString:@"SAY"])
   {
     [self.synth stopSpeaking];
     [self.synth startSpeakingString:messageString];
+  }
+  else if ([commandString isEqualToString:@"TALK"])
+  {
+    if ([messageString isEqualToString:@"off"])
+    {
+      [client printDebugInformation:TXTLS(@"ssshh") channel:c];
+      [self.synth setVolume:0];
+      self.enabled = false;
+    }
+    else if ([messageString isEqualToString:@"on"])
+    {
+      [client printDebugInformation:TXTLS(@"aaaah") channel:c];
+      [self.synth setVolume:0.1];
+      self.enabled = true;
+    }
   }
 }
 
@@ -69,7 +90,7 @@
   else if ([params count] > 0 && [params[0] hasPrefix:@"~"])
   {
     channel = params[0];
-    NSLog(@"%@", channel);
+    // NSLog(@"%@", channel);
   }
 
   NSString *sender = senderDict[@"senderNickname"];
@@ -95,7 +116,7 @@
     NSString *allfromnick = [[self nicknames] objectForKey:key];
 
     // Use voice only from selected nicknames that are either in private messages, contain our nickname, has the "true" flag to speak all messages from that nickname or contains the channel name
-    if ([sender isEqualToString:key] && (
+    if (self.enabled && [sender isEqualToString:key] && (
            [textonly contains:[client localNickname]] ||
            [allfromnick isEqualToString:@"true"] ||
            [allfromnick contains:channel] ||
