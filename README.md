@@ -16,7 +16,7 @@ Right-click on the bundle, and click Show Package Contents. Open `Resources/nick
 * Add nicknames as keys in the `nicknames.plist` file.
 * Add channels as space-separated values.
 * Use the string `true` to enable speech for every message from a nickname.
-* You can assign different voices to different nicknames by adding `voice:tom.premium` to values, which is the last part of their corresponding Bundle identifier. Look in `/System/Library/Speech/Voices` for voice bundles, and open their `Info.plist` to find it. Omit this option to use your default system voice. **Note: You need to have the voice installed on your system to use it.**
+* You can assign different voices to different nicknames by adding for example `voice:tom.premium` to values, which is the last part of their corresponding Bundle identifier. Look in `/System/Library/Speech/Voices` for voice bundles, and open their `Info.plist` to find it. Omit this option to use your default system voice. **Note: You need to have the voice installed on your system to use it.**
 
 
 ## Usage
@@ -29,6 +29,11 @@ Enable speech
 Disable speech
 ```
 /talk off
+```
+
+Set volume, use a float value from 0 to 1 (default: 0.5)
+```
+/volume 0.25
 ```
 
 ## TODO
