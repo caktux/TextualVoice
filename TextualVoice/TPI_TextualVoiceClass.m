@@ -53,7 +53,7 @@
                           commandString:(NSString *)commandString
                           messageString:(NSString *)messageString
 {
-  IRCChannel *c = [mainWindow() selectedChannel];
+//  IRCChannel *c = [mainWindow() selectedChannel];
 
   if ([commandString isEqualToString:@"SAY"])
   {
@@ -65,12 +65,12 @@
   {
     if ([messageString isEqualToString:@"off"])
     {
-      [client printDebugInformation:TXTLS(@"ssshh") channel:c];
+//      [client printDebugInformation:TXTLS(@"ssshh") channel:c];
       self.enabled = false;
     }
     else if ([messageString isEqualToString:@"on"])
     {
-      [client printDebugInformation:TXTLS(@"aaaah") channel:c];
+//      [client printDebugInformation:TXTLS(@"aaaah") channel:c];
       self.enabled = true;
     }
   }
@@ -78,7 +78,7 @@
   {
     double newVolume = [messageString doubleValue];
     self.volume = newVolume;
-    [client printDebugInformation:TXTLS([NSString stringWithFormat:@"volume set to %f", self.volume]) channel:c];
+//    [client printDebugInformation:TXTLS([NSString stringWithFormat:@"volume set to %f", self.volume]) channel:c];
   }
 }
 
