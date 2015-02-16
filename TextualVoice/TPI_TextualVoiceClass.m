@@ -39,21 +39,21 @@
   self.synth = [[NSSpeechSynthesizer alloc] init];
 }
 
-- (NSArray *)pluginSupportsUserInputCommands
+- (NSArray *)subscribedUserInputCommands
 {
   return @[@"say", @"talk", @"volume"];
 }
 
-- (NSArray *)pluginSupportsServerInputCommands
+- (NSArray *)subscribedServerInputCommands
 {
   return @[@"privmsg"];
 }
 
-- (void)messageSentByUser:(IRCClient *)client
-                  message:(NSString *)messageString
-                  command:(NSString *)commandString
+- (void)userInputCommandInvokedOnClient:(IRCClient *)client
+                          commandString:(NSString *)commandString
+                          messageString:(NSString *)messageString
 {
-  IRCChannel *c = [[self worldController] selectedChannelOn:client];
+  IRCChannel *c = [mainWindow() selectedChannel];
 
   if ([commandString isEqualToString:@"SAY"])
   {
@@ -82,9 +82,9 @@
   }
 }
 
-- (void)messageReceivedByServer:(IRCClient *)client
-                         sender:(NSDictionary *)senderDict
-                        message:(NSDictionary *)messageDict
+- (void)didReceiveServerInputOnClient:(IRCClient *)client
+                    senderInformation:(NSDictionary *)senderDict
+                   messageInformation:(NSDictionary *)messageDict
 {
   NSString *channel = @"";
   NSArray *params = messageDict[@"messageParamaters"];

@@ -22,6 +22,7 @@
 		CC793D0119273FD900AA2F6C /* NSStringExtractedComponent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSStringExtractedComponent.m; path = "objc-NSString-Hyperlink/NSStringExtractedComponent.m"; sourceTree = "<group>"; };
 		CC793D031927417300AA2F6C /* NSString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Hyperlink.h"; path = "objc-NSString-Hyperlink/NSString+Hyperlink.h"; sourceTree = "<group>"; };
 		CC793D041927417300AA2F6C /* NSString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hyperlink.m"; path = "objc-NSString-Hyperlink/NSString+Hyperlink.m"; sourceTree = "<group>"; };
+		CCA7E9761A92945F005E9A37 /* Headers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Headers; path = ../../Textual/Classes/Headers; sourceTree = "<group>"; };
 		CCD68C52192613B8002EC591 /* TextualVoice.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextualVoice.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD68C55192613B8002EC591 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		CCD68C58192613B8002EC591 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -84,6 +85,7 @@
 		CCD68C5B192613B8002EC591 /* TextualVoice */ = {
 			isa = PBXGroup;
 			children = (
+				CCA7E9761A92945F005E9A37 /* Headers */,
 				CCD68C5C192613B8002EC591 /* Supporting Files */,
 			);
 			path = TextualVoice;
@@ -222,7 +224,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};
@@ -255,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 			};

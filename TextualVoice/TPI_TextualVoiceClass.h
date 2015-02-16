@@ -6,15 +6,22 @@
 //  Copyright (c) 2014 caktux. All rights reserved.
 //
 
+#import "TextualApplication.h"
 #import <Foundation/Foundation.h>
 
 @interface TPI_TextualVoiceClass : NSObject <THOPluginProtocol>
 
-- (NSArray *)pluginSupportsUserInputCommands;
-- (void)messageSentByUser:(IRCClient *)client message:(NSString *)messageString command:(NSString *)commandString;
+- (NSArray *)subscribedUserInputCommands;
 
-- (NSArray *)pluginSupportsServerInputCommands;
-- (void)messageReceivedByServer:(IRCClient *)client sender:(NSDictionary *)senderDict message:(NSDictionary *)messageDict;
+- (void)userInputCommandInvokedOnClient:(IRCClient *)client
+                          commandString:(NSString *)commandString
+                          messageString:(NSString *)messageString;
+
+- (NSArray *)subscribedServerInputCommands;
+- (void)didReceiveServerInputOnClient:(IRCClient *)client
+                    senderInformation:(NSDictionary *)senderDict
+                   messageInformation:(NSDictionary *)messageDict;
+
 - (void)dealloc;
 
 @end
